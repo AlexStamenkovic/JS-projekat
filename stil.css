@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: lightgreen;
+    height: 100vh;
+    display: flex;
+}
+
+.omotac {
+    width:600px;
+    height:600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    perspective: 1000px;
+}
+.karta {
+    border:2px solid grey;
+    width:25%;
+    height:33,333%;
+    margin:5px;
+    position:relative;
+    transform:scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+.karta:active{
+    transform:scale(.97);
+    transition:transform .2s;
+}
+.karta.okreni{
+    transform:rotateY(180deg);
+}
+
+ 
+.druga,
+.prva{
+    position: absolute;
+    width:100%;
+    height:100%;
+    border: 2px solid palevioletred;
+    border-radius: 5px;
+    padding: 20px;
+    background-color:white;
+    backface-visibility: hidden;
+}
+.druga{
+    transform:rotateY(180deg); 
+}
